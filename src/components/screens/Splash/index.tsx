@@ -28,6 +28,7 @@ class Splash extends React.Component<Props, State> {
             this._getPostalAddressAsync(this.state.location.coords.latitude, this.state.location.coords.longitude)
                 .then(() => this.props.setGeolocation(this.state.location, this.state.postalAddress))
         );
+
         setTimeout(() => this.props.navigation.navigate('Landing'), 3000);
     }
 
@@ -59,8 +60,7 @@ class Splash extends React.Component<Props, State> {
             <ImageBackground source={Assets.Image.Splash} style={styles.imageBackground}>
                 <View style={styles.container}>
                     <View style={styles.wrapper}>
-                        <Text style={styles.title}>{'Sample Service'}</Text>
-                        <Text style={styles.subtitle}>{'AI Startup'}</Text>
+
                     </View>
                 </View>
             </ImageBackground>

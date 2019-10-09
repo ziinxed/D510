@@ -1,4 +1,4 @@
-import {StyleSheet, TextStyle, ViewStyle} from "react-native";
+import {StyleSheet, TextStyle, ViewStyle, FlexStyle} from "react-native";
 
 const imageBackground: ViewStyle = {
     flex: 1,
@@ -25,10 +25,31 @@ const value: TextStyle = {
     fontSize: 16,
 };
 
+const inputvalue: TextStyle={
+
+    color: 'red',
+    fontSize: 40,
+    textAlign : 'center'
+};
+
+const fixToText: ViewStyle = {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+};
+
+const separator: ViewStyle= {
+    marginVertical: 8,
+    borderBottomColor: '#737373',
+    borderBottomWidth: StyleSheet.hairlineWidth
+};
+
 export const styles = StyleSheet.create({
     imageBackground,
     container,
     wrapper,
     title,
-    value
+    value,
+    inputvalue,
+    fixToText,
+    separator
 });

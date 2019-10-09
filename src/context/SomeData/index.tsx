@@ -7,7 +7,7 @@ export type SomeData = {
 };
 
 export const initialSomeData = {
-    fieldA: ['Hello', 'World'],
+    fieldA: ['박예빈', '바부'],
     fieldB: false,
     fieldC: new Date()
 };

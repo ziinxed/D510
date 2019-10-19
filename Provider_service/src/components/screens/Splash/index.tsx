@@ -59,9 +59,9 @@ class Splash extends React.Component<Props, State> {
         return (
             <ImageBackground source={Assets.Image.Splash} style={styles.imageBackground}>
                 <View style={styles.container}>
-                    <View style={styles.wrapper}>
-
+                    <View style={styles.wrapper} >
                     </View>
+
                 </View>
             </ImageBackground>
         );

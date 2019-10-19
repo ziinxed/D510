@@ -1,19 +1,31 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
+import GenerateForm from 'react-native-form-builder';
 
-export default function App() {
+
+
+
+export default function App(){
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text style={styles.container}>
+        </Text>
+      <Text style={styles.container}>
+        가격을 입력하세요</Text>
+
+
+
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 2,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    fontSize: 50
   },
 });

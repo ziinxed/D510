@@ -48,6 +48,10 @@ class Landing extends React.Component<Props, State> {
 
                 </View>
                 <View style={{height: 40}}>
+                    <Button
+                        title="splash"
+                        onPress={() => this.props.navigation.navigate('Splash')}
+                    />
 
                 </View>
                 <View>

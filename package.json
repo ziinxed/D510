@@ -1,0 +1,12 @@
+{
+  "name": "d510",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ziinxed/D510.git",
+  "author": "deok <ziinxed@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  }
+}

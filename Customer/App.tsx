@@ -12,7 +12,7 @@ export default class App extends React.Component
 {
     // state 추가함.
     state = {
-        price : 0
+        price : '0'
     }
 
     render()

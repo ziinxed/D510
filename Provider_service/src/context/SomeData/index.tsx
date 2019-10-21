@@ -1,15 +1,13 @@
 import * as React from "react";
 
 export type SomeData = {
-    fieldA: Array<string>,
-    fieldB: boolean,
-    fieldC: Date
+    price: string,
+
 };
 
 export const initialSomeData = {
-    fieldA: ['박예빈', '바부'],
-    fieldB: false,
-    fieldC: new Date()
+    price: 'loading'
+
 };
 
 const SomeDataContext = React.createContext<SomeData>(initialSomeData);

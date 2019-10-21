@@ -1,5 +1,6 @@
 import React from "react";
 import SomeDataContext, {initialSomeData, SomeData} from "./index";
+import axios from 'axios';
 
 type Props = {}
 
@@ -13,7 +14,10 @@ class SomeDataProvider extends React.Component<Props, State> {
         };
     }
 
+
+
     render() {
+
         return (
             <SomeDataContext.Provider value={this.state}>
                 {this.props.children}

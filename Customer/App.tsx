@@ -21,7 +21,8 @@ export default class App extends React.Component
     }
 
    componentDidMount(): void {
-       axios.get('https://bba2kiilx5.execute-api.ap-northeast-2.amazonaws.com/week7test/fetch-message').then(response => {console.log(response.data.output);})
+       axios.get('https://bba2kiilx5.execute-api.ap-northeast-2.amazonaws.com/week7test/fetch-message')
+           .then(response => {console.log(response.data);})
    }
 
 
@@ -56,7 +57,15 @@ export default class App extends React.Component
                     />
                     <Button
                         title="SUBMIT"
-                        onPress={() => Alert.alert(this.state.price)}
+                        onPress={() => {
+                            //Alert.alert(this.state.price);
+                            axios.post('https://bba2kiilx5.execute-api.ap-northeast-2.amazonaws.com/week7test/fetch-message', {price: this.state.price} )
+                                .then(response => {
+                                    console.log(response.data);
+
+                                });
+                        }
+                        }
                     />
 
                 </View>

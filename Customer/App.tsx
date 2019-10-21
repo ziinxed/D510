@@ -2,28 +2,41 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput,  Alert} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Input, Button } from 'react-native-elements';
+import axios from 'axios';
 
 
-
-
-export const input = React.createRef<Input>();
-
+type Price = {
+    output: string;
+    exitCode: string;
+    message: string;
+}
 export default class App extends React.Component
 {
     // state 추가함.
-    state = {
-        price : '0'
+    constructor(props) {
+        super(props);
+        this.state = {
+            price : '0'
+        };
     }
+
+   componentDidMount(): void {
+       axios.get('https://bba2kiilx5.execute-api.ap-northeast-2.amazonaws.com/week7test/fetch-message').then(response => {console.log(response.data.output);})
+   }
+
+
+
 
     render()
     {
+
+
         return (
             <View style={styles.container}>
                 <View style={styles.wrapper}>
                     <Text style={styles.title}>
                         가격을 입력하세요
                     </Text>
-
 
                     <Input
                         leftIcon={

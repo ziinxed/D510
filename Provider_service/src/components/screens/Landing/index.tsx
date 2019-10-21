@@ -11,6 +11,7 @@ import {
 import {NavigationInjectedProps, withNavigation} from "react-navigation";
 import {Geolocation} from "../../../context/Session";
 import {styles} from "./styles";
+import axios from "axios";
 
 
 type Props = NavigationInjectedProps & {
@@ -20,19 +21,45 @@ type Props = NavigationInjectedProps & {
     geolocation: Geolocation
 }
 
-type State = {}
+
 
 function Separator() {
     return <View style={styles.separator} />;
 }
 
-class Landing extends React.Component<Props, State> {
+let currentPrice : string = '';
+
+class Landing extends React.Component {
     constructor(props: Props) {
         super(props);
-        this.state = {}
+        this.state = {
+        price : 'loading'
+        }
+        currentPrice : 'loading';
     }
+    
+    
+
+
+    getPrice = async () => {
+         let tmp = await axios.get('https://bba2kiilx5.execute-api.ap-northeast-2.amazonaws.com/week7test/fetch-message')
+            .then(response => {
+                console.log(response.data);
+            });
+         console.log(tmp);
+         //setInterval()
+        //if(tmp != currentPrice){
+            //this.setState({price : response.data.output});
+            //currentPrice = response.data.output;
+        //}
+
+    }
+    priceCheck = () => setInterval(this.getPrice,600);
 
     render() {
+
+        //this.priceCheck();
+
         return(
             <SafeAreaView style={styles.container}>
                 <View style = {styles.wrapper}>

@@ -62,6 +62,7 @@ export default class App extends React.Component
                             axios.post('https://bba2kiilx5.execute-api.ap-northeast-2.amazonaws.com/week7test/fetch-message', {price: this.state.price} )
                                 .then(response => {
                                     console.log(response.data);
+                                    Alert.alert(response.data);
 
                                 });
                         }

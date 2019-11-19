@@ -1,9 +1,9 @@
 {
-  "devToolsPort": 19003,
+  "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": 19004,
-  "packagerPid": 84201,
-  "expoServerNgrokUrl": "https://6w-k44.anonymous.customer.exp.direct",
-  "packagerNgrokUrl": "https://packager.6w-k44.anonymous.customer.exp.direct",
-  "ngrokPid": 84220
+  "packagerPort": 19001,
+  "packagerPid": 5733,
+  "expoServerNgrokUrl": "https://87-fuz.anonymous.customer.exp.direct",
+  "packagerNgrokUrl": "https://packager.87-fuz.anonymous.customer.exp.direct",
+  "ngrokPid": 5762
 }
